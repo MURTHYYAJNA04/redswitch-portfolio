@@ -12,30 +12,75 @@
       color: #222;
       line-height: 1.6;
     }
+
     header {
       background: #e41e26;
-      padding: 40px;
-      text-align: center;
+      padding: 25px 40px;
       color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
+
+    .left-box, .right-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    header img {
+      width: 70px;
+      height: 70px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .company-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .tagline {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .contact-links {
+      text-align: right;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .contact-links a {
+      color: #ffffff;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
     section {
       padding: 60px 80px;
       border-bottom: 1px solid #f0f0f0;
     }
+
     h1, h2, h3 {
       margin: 0 0 20px 0;
     }
+
     .services, .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
+
     .service-box, .project-box {
       padding: 20px;
       border: 1px solid #ddd;
       border-radius: 8px;
       background: #fafafa;
     }
+
     footer {
       background: #333;
       color: white;
@@ -45,11 +90,24 @@
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
-    <h1>Red Switch Global</h1>
-    <p>Your trusted partner in Business Intelligence</p>
+    <div class="left-box">
+      <img src="Logo-1.webp" alt="Red Switch Global Logo">
+      <div>
+        <p class="company-title">Red Switch Global</p>
+        <p class="tagline">Your trusted partner in Business Intelligence</p>
+      </div>
+    </div>
+
+    <div class="right-box contact-links">
+      <p><a href="https://www.linkedin.com/company/red-switch" target="_blank">LinkedIn Profile</a></p>
+      <p><a href="https://www.redswitchglobal.com/" target="_blank">www.redswitchglobal.com</a></p>
+    </div>
   </header>
 
+  <!-- ABOUT -->
   <section>
     <h2>About Us</h2>
     <p>
@@ -58,6 +116,7 @@
     </p>
   </section>
 
+  <!-- SERVICES -->
   <section>
     <h2>Services</h2>
     <div class="services">
@@ -69,40 +128,44 @@
     </div>
   </section>
 
+  <!-- APPROACH -->
   <section>
     <h2>Our Approach</h2>
     <p>
       <strong>1. Discovery:</strong> Understand needs & data.<br/>
       <strong>2. Design:</strong> Tailor solution for KPIs & strategy.<br/>
-      <strong>3. Implementation:</strong> Seamless integration with client ecosystem.<br/>
+      <strong>3. Implementation:</strong> Seamless integration with client systems.<br/>
       <strong>4. Support:</strong> Optimization, monitoring, enhancement.
     </p>
   </section>
 
+  <!-- PROJECTS -->
   <section>
     <h2>Key Projects</h2>
     <div class="projects">
       <div class="project-box">
         <h3>Project 1</h3>
-        <p>Dashboard transformation for retail analytics. Improved decision flow and reduced manual reporting by 60%.</p>
+        <p>Dashboard transformation for retail analytics. Reduced manual reporting by 60%.</p>
       </div>
       <div class="project-box">
         <h3>Project 2</h3>
-        <p>Predictive demand model for ecommerce client. Increased operational planning accuracy.</p>
+        <p>Predictive demand modeling increasing planning accuracy.</p>
       </div>
       <div class="project-box">
         <h3>Project 3</h3>
-        <p>Automation and BI tracking for marketing conversion channels with live KPI reporting.</p>
+        <p>Marketing conversion KPIs automated with live BI tracking.</p>
       </div>
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
   <section>
     <h2>Testimonials</h2>
     <p>“Transformative insights, reliable delivery, and clear business impact.”</p>
   </section>
 
-    <section>
+  <!-- CONTACT -->
+  <section>
     <h2>Contact</h2>
     <p>
       Website: <a href="https://www.redswitchglobal.com/" target="_blank">https://www.redswitchglobal.com/</a><br/>
@@ -110,9 +173,10 @@
     </p>
   </section>
 
-
   <footer>
     <p>© 2025 Red Switch Global. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
+
