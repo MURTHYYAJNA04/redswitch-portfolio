@@ -13,55 +13,68 @@
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
       background: #e41e26;
-      padding: 25px 40px;
+      padding: 20px 40px;
       color: white;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
       flex-wrap: wrap;
+      box-sizing: border-box;
     }
 
-    .left-box, .right-box {
+    .left-box {
       display: flex;
       align-items: center;
       gap: 15px;
+      min-width: 250px;
+    }
+
+    .right-box {
+      text-align: right;
+      font-size: 14px;
+      line-height: 1.5;
+      min-width: 220px;
     }
 
     header img {
       width: 70px;
-      height: 70px;
-      border-radius: 6px;
-      object-fit: cover;
+      height: auto;
+      display: block;
     }
 
     .company-title {
-      font-size: 30px;
+      font-size: 28px;
       font-weight: bold;
       margin: 0;
+      white-space: nowrap;
     }
 
     .tagline {
       font-size: 14px;
-      margin: 0;
-    }
-
-    .contact-links {
-      text-align: right;
-      font-size: 14px;
-      line-height: 20px;
+      margin: 3px 0 0 0;
+      white-space: nowrap;
     }
 
     .contact-links a {
       color: #ffffff;
       text-decoration: underline;
       font-weight: bold;
+      margin-left: 8px;
     }
 
+    .contact-links a:first-child {
+      margin-left: 0;
+    }
+
+    /* BODY SECTIONS */
     section {
-      padding: 60px 80px;
+      padding: 40px 80px;
       border-bottom: 1px solid #f0f0f0;
+      box-sizing: border-box;
     }
 
     h1, h2, h3 {
@@ -85,7 +98,26 @@
       background: #333;
       color: white;
       text-align: center;
-      padding: 30px;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .right-box {
+        text-align: left;
+      }
+      .company-title,
+      .tagline {
+        white-space: normal;
+      }
+      section {
+        padding: 30px 20px;
+      }
     }
   </style>
 </head>
@@ -94,7 +126,8 @@
   <!-- HEADER -->
   <header>
     <div class="left-box">
-      <img src="Logo-1.webp" alt="Red Switch Global Logo">
+      <!-- use the exact file name you uploaded to GitHub here -->
+      <img src="Logo-1.png" alt="Red Switch Global Logo">
       <div>
         <p class="company-title">Red Switch Global</p>
         <p class="tagline">Your trusted partner in Business Intelligence</p>
@@ -102,8 +135,10 @@
     </div>
 
     <div class="right-box contact-links">
-      <p><a href="https://www.linkedin.com/company/red-switch" target="_blank">LinkedIn Profile</a></p>
-      <p><a href="https://www.redswitchglobal.com/" target="_blank">www.redswitchglobal.com</a></p>
+      <div>
+        <a href="https://www.linkedin.com/company/red-switch" target="_blank">LinkedIn Profile</a>
+        <a href="https://www.redswitchglobal.com/" target="_blank">www.redswitchglobal.com</a>
+      </div>
     </div>
   </header>
 
@@ -134,7 +169,7 @@
     <p>
       <strong>1. Discovery:</strong> Understand needs & data.<br/>
       <strong>2. Design:</strong> Tailor solution for KPIs & strategy.<br/>
-      <strong>3. Implementation:</strong> Seamless integration with client systems.<br/>
+      <strong>3. Implementation:</strong> Seamless integration with client ecosystem.<br/>
       <strong>4. Support:</strong> Optimization, monitoring, enhancement.
     </p>
   </section>
@@ -145,15 +180,15 @@
     <div class="projects">
       <div class="project-box">
         <h3>Project 1</h3>
-        <p>Dashboard transformation for retail analytics. Reduced manual reporting by 60%.</p>
+        <p>Dashboard transformation for retail analytics. Improved decision flow and reduced manual reporting by 60%.</p>
       </div>
       <div class="project-box">
         <h3>Project 2</h3>
-        <p>Predictive demand modeling increasing planning accuracy.</p>
+        <p>Predictive demand model for ecommerce client. Increased operational planning accuracy.</p>
       </div>
       <div class="project-box">
         <h3>Project 3</h3>
-        <p>Marketing conversion KPIs automated with live BI tracking.</p>
+        <p>Automation and BI tracking for marketing conversion channels with live KPI reporting.</p>
       </div>
     </div>
   </section>
@@ -179,4 +214,5 @@
 
 </body>
 </html>
+
 
